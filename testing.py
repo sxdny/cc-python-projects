@@ -1,15 +1,25 @@
 # Testing file ;)
 
-class Grade:
-    pass
+# from datetime import datetime
 
-grade = Grade()
+# # Hora en formato de 24 horas
+# hora_24 = 15
 
-# verificar que es del tipo grade
+# # Convertir a formato de 12 horas
+# hora_12 = datetime.strptime(f"{hora_24}", "%H").strftime('%-I%p')
 
-print(type(grade))
+# print(hora_12)  # Salida: 03 PM
 
-if isinstance(3, Grade):
-    print("Es del tipo Grade...")
-else:
-    print("No es del tipo Grade.")
+items = {'pancakes': 7.50, 'waffles': 5.50, 'burguer': 11.00}
+
+for key, value in items.items():
+    print(key, value)
+
+
+
+def calculate_total(purchased_items):
+    items_eq = [value for key, value in items.items() if key in purchased_items]
+    print(sum(items_eq))
+        
+
+calculate_total(['waffles', 'pancakes'])
